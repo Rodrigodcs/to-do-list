@@ -1,8 +1,14 @@
 import readlineSync from "readline-sync"
+import fs from "fs"
 
 const incompleteMark = String.fromCodePoint(0x1f534)
 const completedMark = String.fromCodePoint(0x1f7E2)
-const list=[];
+
+let list = [];
+if(fs.existsSync('list.txt')){
+    list = JSON.parse(fs.readFileSync(`./list.txt`,'utf8'));
+}
+
 let selection;
 
 do{
@@ -54,5 +60,8 @@ do{
                 console.log("========================")
             }
             break;
+        case -1:
+            fs.writeFileSync(`list.txt`,JSON.stringify(list))
+            
     }
 }while(selection!==-1)
