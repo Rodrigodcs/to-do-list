@@ -1,1 +1,1 @@
-[{"chore":"11111","completed":false}]
+[{"chore":"333333","completed":true,"pomodoro":0},{"chore":"11111","completed":false,"pomodoro":0},{"chore":"22222","completed":false,"pomodoro":0},{"chore":"11111","completed":false,"pomodoro":0}]
